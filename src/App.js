@@ -1,24 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+import PersonList from './components/PersonList';
+import PersonAdd from './components/PersonAdd';
+import PersonHome from './components/PersonHome';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        {/* Your header or navigation bar can go here */}
+        <Routes>
+          <Route path="/" exact element={<PersonHome />} />
+          <Route path="/list" element={<PersonList />} />
+          <Route path="/add-customer" element={<PersonAdd/>} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

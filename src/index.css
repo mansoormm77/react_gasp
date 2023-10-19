@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +14,84 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#viewport {
+  overflow: hidden;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#content {
+  overflow: visible;
+  width: 100%;
+}
+
+
+
+
+.header, .end {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header, .slide, .end {
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel {
+  width: 500%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.slide { 
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
+}
+
+.box {
+ 
+  align-self: flex-start;
+  position: relative;
+}
+.box img{
+  width: 190px !important;
+  height: 100px;
+}
+
+.pink { 
+  background-color: pink
+}
+.red { 
+  background-color: red
+}
+.orange {
+  background-color: orange;
+}
+.purple {
+  background-color: purple;
+}
+.green {
+  background-color: green;
+}
+.grey {
+  background-color: grey;
+}
+.yellow {
+  background-color: yellow;
 }
